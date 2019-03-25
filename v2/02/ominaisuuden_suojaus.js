@@ -28,3 +28,7 @@ console.log(henkilo1.getNimi());
 console.log(henkilo2.getNimi());
 
 console.log( map1 === map2);  // true
+
+console.log( henkilo1.getMap === henkilo2.getMap);  // true
+
+
