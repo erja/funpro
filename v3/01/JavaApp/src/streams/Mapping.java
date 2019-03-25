@@ -28,7 +28,7 @@ public class Mapping{
         words.stream()
                  .flatMap((String line) -> Arrays.stream(line.split("")))
                  .distinct()
-                 .forEach(i -> System.out.println());
+                 .forEach(i -> System.out.println(i));
 
         // flatMap
         List<Integer> numbers1 = Arrays.asList(1,2,3,4,5);

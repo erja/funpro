@@ -1,4 +1,4 @@
-# viikko 1 01
+# viikko 1 01 
 
 
 # Funktionaalinen ohjelmointi

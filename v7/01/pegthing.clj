@@ -19,7 +19,9 @@
 (defn triangular?
   "Is the number triangular? e.g. 1, 3, 6, 10, 15, etc"
   [n]
-  (= n (last (take-while #(>= n %) tri))))
+;;  (= n (last (take-while #(>= n %) tri))))
+;; vaihtoehtoinen tapa partial-funktiolla:
+  (= n (last (take-while (partial >= n) tri))))
 
 (defn row-tri
   "The triangular number at the end of row n"
@@ -30,7 +32,11 @@
   "Returns row number the position belongs to: pos 1 in row 1,
   positions 2 and 3 in row 2, etc"
   [pos]
-  (inc (count (take-while #(> pos %) tri))))
+;;  (inc (count (take-while #(> pos %) tri))))
+
+;; Viimeinen  rivi voisi olla myös:
+ (inc (count (take-while (partial > pos) tri))))
+
 
 (defn in-bounds?
   "Is every position less than or equal the max position?"

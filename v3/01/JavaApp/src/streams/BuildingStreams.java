@@ -12,7 +12,7 @@ public class BuildingStreams {
         
         // Stream.of
         Stream<String> stream = Stream.of("Java 8", "Lambdas", "In", "Action");
-        stream.map(s -> s.toUpperCase()).forEach(i -> System.out.println());
+        stream.map(s -> s.toUpperCase()).forEach(i -> System.out.println(i));
 
         // Stream.empty
         Stream<String> emptyStream = Stream.empty();
@@ -24,7 +24,7 @@ public class BuildingStreams {
         // Stream.iterate
         Stream.iterate(0, n -> n + 2)
               .limit(10)
-              .forEach(i -> System.out.println());
+              .forEach(i -> System.out.println(i));
 
         // fibonnaci with iterate
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1],t[0] + t[1]})
@@ -34,24 +34,24 @@ public class BuildingStreams {
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1],t[0] + t[1]})
               .limit(10)
               . map(t -> t[0])  
-              .forEach(i -> System.out.println());
+              .forEach(i -> System.out.println(i));
 
         // random stream of doubles with Stream.generate
         Stream.generate(() -> Math.random())
               .limit(10)
-              .forEach(i -> System.out.println());
+              .forEach(i -> System.out.println(i));
  
         // stream of 1s with Stream.generate
         IntStream.generate(() -> 1)
                  .limit(5)
-                 .forEach(i -> System.out.println());
+                 .forEach(i -> System.out.println(i));
 
         IntStream.generate(new IntSupplier(){
             public int getAsInt(){
                 return 2;
             }
         }).limit(5)
-          .forEach(i -> System.out.println());
+          .forEach(i -> System.out.println(i));
    
 
         IntSupplier fib = new IntSupplier(){

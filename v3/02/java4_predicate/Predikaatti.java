@@ -13,7 +13,7 @@ import java.util.ArrayList;
 class Predikaatti{
     
     public static <T> List<T> filtteri(List<T> lista, Predicate<T> pred){
-        List<T> tulokset = new ArrayList<>();
+        List<T> tulokset = new ArrayList<T>();
         for(T t: lista){
             if(pred.test(t)){
                 tulokset.add(t);
@@ -33,15 +33,15 @@ class Predikaatti{
                 }
         });
         
-        pirkko.forEach((s) -> System.out.println(s));
+        pirkko.forEach(s -> System.out.println(s));
         System.out.println("----------");
         
         List<String> kaikki = filtteri(nimet, (String s) -> true);
-        kaikki.forEach((s) -> System.out.println(s));
+        kaikki.forEach(s -> System.out.println(s));
         System.out.println("----------");    
         
         List<String> mAlkuiset = filtteri(nimet, (String s) -> s.startsWith("M"));
-        mAlkuiset.forEach((s) -> System.out.println(s));
+        mAlkuiset.forEach(s -> System.out.println(s));
         System.out.println("----------");    
         
         

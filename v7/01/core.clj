@@ -78,6 +78,12 @@ nimi
 ; => "Herra Hu" heti
 
 
+(def maki (fn[k-piste lisapisteet pituus]
+    (+ (* (- pituus k-piste) lisapisteet ) 60)))
+(apply (comp str min) 
+    (filter #(> % 100)
+    (map(partial maki 90 1.8) [100 120 150])
+))
 
 (defn -main
   "I don't do a whole lot ... yet."

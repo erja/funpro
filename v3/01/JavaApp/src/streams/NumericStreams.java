@@ -12,7 +12,7 @@ public class NumericStreams{
     
         List<Integer> numbers = Arrays.asList(3,4,5,1,2);
 
-        Arrays.stream(numbers.toArray()).forEach(i -> System.out.println());
+        Arrays.stream(numbers.toArray()).forEach(i -> System.out.println(i));
         int calories = menu.stream()
                            .mapToInt(dish -> dish.getCalories())
                            .sum();

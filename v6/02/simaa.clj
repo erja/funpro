@@ -17,7 +17,7 @@
 
 
 (defn parse 
-   "parse tuottaa merkkijonovektoreita:  ["Vesi" "litraa" "10"] jne."
+  "parse tuottaa merkkijonovektoreita:['Vesi' 'litraa' '10'] jne."
   [string]
   (map #(clojure.string/split % #",")
        (clojure.string/split string #"\n")))

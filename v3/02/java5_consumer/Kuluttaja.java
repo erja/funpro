@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 class Kuluttaja{
     
-    public static <T> void teeKaikille(List<T> lista, Consumer<T> con){
+    public static <T> void teeKaikille(List<T> lista, Consumer<? super T> con){
         for(T t: lista){
             con.accept(t);
         }
@@ -22,7 +22,7 @@ class Kuluttaja{
         
         List<String> nimet = new ArrayList<String>(){{add("Martti"); add("Sauli"); add("Mauno"); add("Pirkko");}};
 
-        teeKaikille(nimet, (String s) -> System.out.println(s));
+        teeKaikille(nimet, (Object s) -> System.out.println(s));
         teeKaikille(nimet, (String s) -> System.out.println(s.toUpperCase()));
         teeKaikille(nimet, (String s) -> System.out.println(s + ":" + Math.random())); // Näinkin voi tehdä :)
     }
