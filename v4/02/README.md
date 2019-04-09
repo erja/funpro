@@ -4,7 +4,7 @@
 
 Näistä annetaan vain osa tehtäviksi (ks. tehtäväksianto työtilasta)
 
-1. a) Kirjoita oma Collector-rajapinnan toteuttaja, joka toimii kuten Collector.joining()-tehdasmetodin palauttama Collector-toteutus.
+1. a) Kirjoita oma Collector-rajapinnan toteuttaja, joka toimii kuten Collectors.joining()-tehdasmetodin palauttama Collector-toteutus.
 Tuota koodaamasi kollektorin avulla merkkijono ArrayList-tietorakenteen sisältämistä Omena-olioista. 
 Kirjoita myös oma joining()-metodia vastaava staattinen tehdasmetodi omaan OmatKollektorit-luokkaan ja käytä sitä.
 * Vinkki: käytä StringBufferia/StringBuilderia Supplierin paluuarvona.
@@ -28,6 +28,7 @@ List<Omena> omenaLista = omenaStream.collect(
     List::add,
     List::addAll);
 ```
+Kirjoita vastatus tehtävän palutukseen.
 
 5. Määrittele Abstrakti tehdas (Abstract Factory) Meijeri, josta saadaan kolmenlaisia tuotteita: maitoa, juustoa, jugurttia.
 Toteuta kaksi erilaista konkreettista tehdasta: laktoositon ja vähälaktoosinen.
