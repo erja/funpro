@@ -4,7 +4,7 @@ const Henkilo  = (function(){
     
     const suojatut = new WeakMap();  // yhteinen ilmentymille
     
-    class Henkilo{
+    class HenkiloX{
         constructor(p_nimi, p_ika){
             suojatut.set(this, {nimi: p_nimi, ika: p_ika});
         }  // suojatut instanssimuuttujat nimi ja ika
@@ -16,7 +16,7 @@ const Henkilo  = (function(){
         
     }
     
-    return Henkilo;
+    return HenkiloX;
 })();
 
 
@@ -28,3 +28,7 @@ console.log(henkilo1.getNimi());
 console.log(henkilo2.getNimi());
 
 console.log( map1 === map2);  // true
+
+console.log( henkilo1.getMap === henkilo2.getMap);  // true
+
+
