@@ -2,7 +2,7 @@
 
 Viikon 6 torstain materiaalia.
 
-# Clojuren ydnfunktioita
+# Clojuren ydinfunktioita
 
 
 1. Oletetaan, että Helsingin kuukausittaiset keskilämpötilat vuodelta 2016 ja 2015 ovat taulukoissa. Tuota uusi taulukko, jossa on kahden vuoden kuukausittaiset keskiarvot. Siivilöi taulukosta positiiviset kuukausikeskiarvot ja laske niistä keskilämpötila.
